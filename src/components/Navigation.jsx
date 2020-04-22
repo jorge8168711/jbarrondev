@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Navigation = (props) => {
+const Navigation = () => {
   return (
     <div className="Navigation">
       <p>Hello Navigation</p>
