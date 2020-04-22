@@ -15,14 +15,14 @@ const Navigation = ({ width }) => {
     <>
       <nav className='w-56 Navigation'>
         <Link href='/'>
-          <a className='block px-8'>
-            <svg className='w-full'>
+          <a className='block px-8 pt-4'>
+            <svg className='w-full h-16'>
               <use href='/img/icons.svg#brandIcon' />
             </svg>
           </a>
         </Link>
 
-        <ul className='font-sans text-sm'>
+        <ul className='mt-8 font-sans text-sm border-r border-yellow-50'>
           {items.map((item) => (
             <li
               key={item.name}
