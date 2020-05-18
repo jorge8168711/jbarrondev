@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { Breakpoint } from 'react-socks';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { Consumer } from '../app-context';

@@ -12,6 +12,7 @@
     "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
     "next": "9.3.5",
+    "nprogress": "^0.2.0",
     "postcss-custom-properties": "^9.1.1",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",

@@ -32,8 +32,8 @@ export const langs = {
           <ul className='pl-6 list-disc list-inside'>
             <li className='mb-4'>
               <strong className='fw-bold'>Maquetación: </strong>He estado a cargo de maquetar sitios
-              web responsive, aplicaciones web o plantillas para los dieferentes clientes de correo
-              electronico utilizando tecnologías como
+              web responsive, aplicaciones web o plantillas para los diferentes clientes de correo
+              electrónico utilizando tecnologías como
               <strong className='text-yellow'> HTML </strong> y
               <strong className='text-yellow'> CSS</strong>, durante mis inicios solamente maquetaba
               y tocaba un poco <strong className='text-yellow'>JavaScript</strong> pero con el
