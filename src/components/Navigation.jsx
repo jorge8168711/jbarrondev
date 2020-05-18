@@ -2,54 +2,66 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Breakpoint } from 'react-socks';
+import { Consumer } from '../app-context';
+
+const items = [
+  { label: 'Acerca de mi', name: '', langKey: 'about' },
+  { label: 'Proyectos', name: 'projects', langKey: 'projects' },
+  { label: 'Contacto', name: 'contact', langKey: 'contact' },
+  { label: 'Acerca de este sitio', name: 'about', langKey: 'websiteAbout' }
+];
 
 const Navigation = ({ width }) => {
   const router = useRouter();
-  const items = [
-    { label: 'Acerca de mi', name: '' },
-    { label: 'Proyectos', name: 'projects' },
-    { label: 'Contacto', name: 'contact' },
-    { label: 'Acerca de este sitio', name: 'about' }
-  ];
-  return (
-    <>
-      <nav className='w-56 Navigation'>
-        <Link href='/'>
-          <a className='block px-8 pt-4'>
-            <svg className='w-full h-16'>
-              <use href='/img/icons.svg#brandIcon' />
-            </svg>
-          </a>
-        </Link>
 
-        <ul className='mt-8 font-sans text-sm border-r border-yellow-50'>
-          {items.map((item) => (
-            <li
-              key={item.name}
-              className={`px-8 py-2 mb-2 text-right border-r-8 ${
-                router.pathname === `/${item.name}` ? 'border-yellow' : 'border-transparent'
-              }`}>
-              <Link href={`/${item.name}`}>
-                <a
-                  className={
-                    router.pathname === `/${item.name}` ? 'text-yellow font-bold' : 'opacity-75'
-                  }>
-                  {item.label}
+  return (
+    <Consumer>
+      {(app) => (
+        <>
+          <Breakpoint md up>
+            <nav className='w-56 Navigation'>
+              <Link href='/'>
+                <a className='block px-8 pt-4'>
+                  <svg className='w-full h-16'>
+                    <use href='/img/icons.svg#brandIcon' />
+                  </svg>
                 </a>
               </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
 
-      <style jsx>
-        {`
-          .Navigation {
-            width: ${width}px;
-          }
-        `}
-      </style>
-    </>
+              <ul className='mt-8 font-sans text-sm'>
+                {items.map((item) => (
+                  <li
+                    key={item.name}
+                    className={`px-8 py-1 mb-3 text-right border-r-4 ${
+                      router.pathname === `/${item.name}` ? 'border-yellow' : 'border-transparent'
+                    }`}>
+                    <Link href={`/${item.name}`}>
+                      <a
+                        className={
+                          router.pathname === `/${item.name}`
+                            ? 'text-yellow font-bold'
+                            : 'opacity-75'
+                        }>
+                        {app.translations[item.langKey].title}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <style jsx>
+              {`
+                .Navigation {
+                  width: ${width}px;
+                }
+              `}
+            </style>
+          </Breakpoint>
+        </>
+      )}
+    </Consumer>
   );
 };
 

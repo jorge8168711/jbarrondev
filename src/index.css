@@ -4,3 +4,10 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+
+.card {
+  border-radius: 15px;
+  background: #171C1E;
+  box-shadow:  10px 10px 20px #14181a, -10px -10px 20px #1a2022;
+}
