@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Breakpoint } from 'react-socks';
 import { Consumer } from '../app-context';
+import LangSelector from './LangSelector';
 
 const items = [
   { label: 'Acerca de mi', name: '', langKey: 'about' },
@@ -19,6 +20,20 @@ const Navigation = ({ width }) => {
     <Consumer>
       {(app) => (
         <>
+          <Breakpoint sm only>
+            <header className='flex items-center px-4 shadow-md bg-primary'>
+              <Link href='/'>
+                <a className='block w-32 mr-auto'>
+                  <svg className='w-full h-16'>
+                    <use href='/img/icons.svg#brandIcon' />
+                  </svg>
+                </a>
+              </Link>
+
+              <LangSelector />
+            </header>
+          </Breakpoint>
+
           <Breakpoint md up>
             <nav className='w-56 Navigation'>
               <Link href='/'>

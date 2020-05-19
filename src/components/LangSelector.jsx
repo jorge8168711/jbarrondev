@@ -1,7 +1,7 @@
 import React from 'react';
 import { Consumer, langs } from '../app-context';
 
-const LangSelector = (props) => {
+const LangSelector = () => {
   return (
     <Consumer>
       {(app) => (

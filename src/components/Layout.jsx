@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { Breakpoint } from 'react-socks';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { Consumer } from '../app-context';
@@ -17,11 +18,14 @@ const Layout = ({ children }) => {
             <meta name='description' content={app.translations.metaDescription} />
           </Head>
 
-          <div className='flex max-w-screen-xl mx-auto'>
+          <div className='flex flex-col max-w-screen-xl mx-auto md:flex-row '>
             <Navigation width={navWidth} />
 
             <div className='flex flex-col Wrapper'>
-              <LangSelector />
+              <Breakpoint md up>
+                <LangSelector />
+              </Breakpoint>
+
               <main className='flex-1'>{children}</main>
               <Footer />
             </div>
