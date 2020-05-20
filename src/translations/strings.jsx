@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
-export const langs = {
+const strings = {
   es: {
-    label: 'Español',
     metaDescription:
       'Front-end developer, padre de familia y amante de la ilustraciónn y los videojuegos.',
     about: {
       title: 'Acerca de mi',
+      metatitle: 'Jorge Barrón | Front-end developer',
       content: (
         <>
           <p className='mb-4'>
@@ -60,21 +60,23 @@ export const langs = {
       )
     },
     projects: {
-      title: 'Proyectos'
+      title: 'Proyectos',
+      metatitle: 'Proyectos'
     },
     contact: {
-      title: 'Contacto'
+      title: 'Contacto',
+      metatitle: 'Contacto'
     },
     websiteAbout: {
-      title: 'Acerca de este sitio'
+      title: 'Acerca de este sitio',
+      metatitle: 'Acerca de este sitio'
     }
   },
   en: {
-    label: 'English',
-    metaDescription:
-      'Front-end developer, padre de familia y amante de la ilustraciónn y los videojuegos.',
+    metaDescription: 'Front-end developer, father, video game and illustration lover.',
     about: {
       title: 'About me',
+      metatitle: 'Jorge Barrón | Front-end developer',
       content: (
         <>
           <p className='mb-4'>
@@ -123,21 +125,18 @@ export const langs = {
       )
     },
     projects: {
-      title: 'Projects'
+      title: 'Projects',
+      metatitle: 'Projects'
     },
     contact: {
-      title: 'Contact'
+      title: 'Contact',
+      metatitle: 'Contact'
     },
     websiteAbout: {
-      title: 'About this website'
+      title: 'About this website',
+      metatitle: 'About this website'
     }
   }
 };
 
-const AppContext = React.createContext({
-  lang: 'es',
-  translations: langs.es,
-  setLanguage: () => null
-});
-
-export const { Provider, Consumer } = AppContext;
+export default strings;

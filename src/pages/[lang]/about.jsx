@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { Layout } from '../components';
+import { Layout } from '../../components';
+import { withLocale } from '../../hocs';
 
 const About = () => {
   return (
@@ -13,11 +14,11 @@ const About = () => {
         />
       </Head>
 
-      <Layout>
+      <Layout contentKey='websiteAbout'>
         <p>ABOUT</p>
       </Layout>
     </>
   );
 };
 
-export default About;
+export default withLocale(About);

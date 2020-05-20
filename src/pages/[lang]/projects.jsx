@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { Layout } from '../components';
+import { Layout } from '../../components';
+import { withLocale } from '../../hocs';
 
 const Projects = () => {
   return (
@@ -10,11 +11,11 @@ const Projects = () => {
         <meta name='description' content='Resumen de mis proyectos a lo largo de mi carrera.' />
       </Head>
 
-      <Layout>
+      <Layout contentKey='projects'>
         <p>PROYECTOS</p>
       </Layout>
     </>
   );
 };
 
-export default Projects;
+export default withLocale(Projects);
