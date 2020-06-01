@@ -2,78 +2,47 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Breakpoint } from 'react-socks';
-import LangSelector from './LangSelector';
 import { useTranslation } from '../hooks';
 
 const items = [
   { label: 'Acerca de mi', name: '', langKey: 'about' },
   { label: 'Proyectos', name: '/projects', langKey: 'projects' },
-  { label: 'Contacto', name: '/contact', langKey: 'contact' },
-  { label: 'Acerca de este sitio', name: '/about', langKey: 'websiteAbout' }
+  { label: 'Contacto', name: '/contact', langKey: 'contact' }
 ];
 
-const Navigation = ({ width }) => {
+const Navigation = () => {
   const router = useRouter();
   const { t, locale } = useTranslation();
 
   return (
-    <>
-      <Breakpoint sm only>
-        <header className='flex items-center px-4 shadow-md bg-primary'>
-          <Link href='/'>
-            <a className='block w-32 mr-auto'>
-              <svg className='w-full h-16'>
-                <use href='/img/icons.svg#brandIcon' />
-              </svg>
-            </a>
-          </Link>
+    <header className='px-4 py-2 shadow-md md:px-6 bg-black-25'>
+      <div className='flex items-center max-w-screen-lg mx-auto'>
+        <Link href='/'>
+          <a className='block w-20 mr-auto md:w-32'>
+            <svg className='w-full h-12'>
+              <use href='/img/icons.svg#brandIcon' />
+            </svg>
+          </a>
+        </Link>
 
-          <LangSelector />
-        </header>
-      </Breakpoint>
-
-      <Breakpoint md up>
-        <nav className='w-56 Navigation'>
-          <Link href='/'>
-            <a className='block px-8 pt-4'>
-              <svg className='w-full h-16'>
-                <use href='/img/icons.svg#brandIcon' />
-              </svg>
-            </a>
-          </Link>
-
-          <ul className='mt-8 font-sans text-sm'>
-            {items.map((item) => (
-              <li
-                key={item.name}
-                className={`px-8 py-1 mb-3 text-right border-r-4 ${
-                  router.pathname === `/[lang]${item.name}` ? 'border-yellow' : 'border-transparent'
-                }`}>
-                <Link href={`/[lang]${item.name}`} as={`/${locale}${item.name}`}>
-                  <a
-                    className={
-                      router.pathname === `/[lang]${item.name}`
-                        ? 'text-yellow font-bold'
-                        : 'opacity-75'
-                    }>
-                    {t(item.langKey).title}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <style jsx>
-          {`
-            .Navigation {
-              width: ${width}px;
-            }
-          `}
-        </style>
-      </Breakpoint>
-    </>
+        <ul className='flex items-center font-sans text-xs md:text-sm'>
+          {items.map((item, i) => (
+            <li key={item.name} className={i > 0 ? 'ml-4 md:ml-10' : ''}>
+              <Link href={`/[lang]${item.name}`} as={`/${locale}${item.name}`}>
+                <a
+                  className={
+                    router.pathname === `/[lang]${item.name}`
+                      ? 'text-yellow font-bold'
+                      : 'opacity-75'
+                  }>
+                  {t(item.langKey).title}
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </header>
   );
 };
 

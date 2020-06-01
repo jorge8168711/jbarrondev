@@ -24,7 +24,7 @@ const strings = {
             especializarme en tecnologías enfocadas en el desarrollo Front-end.
           </p>
 
-          <p className='mb-4'>
+          {/* <p className='mb-4'>
             A lo largo de mi carrera como desarrollador he estado a cargo de diferentes actividades
             como las siguientes:
           </p>
@@ -55,7 +55,7 @@ const strings = {
             </li>
             <li className='mb-4'>Desarrollo Web con React.</li>
             <li className='mb-4'>Desarrollo Web con Angular.</li>
-          </ul>
+          </ul> */}
         </>
       )
     },
@@ -91,7 +91,7 @@ const strings = {
             learn a lot every day and specialize in Front-end technologies.
           </p>
 
-          <p className='mb-4'>
+          {/* <p className='mb-4'>
             Throughout my career as developer I have been in charge of different activities such as
             the following:
           </p>
@@ -120,7 +120,7 @@ const strings = {
             </li>
             <li className='mb-4'>Web development with React.</li>
             <li className='mb-4'>Web development with Angular.</li>
-          </ul>
+          </ul> */}
         </>
       )
     },
