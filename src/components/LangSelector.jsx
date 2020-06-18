@@ -17,25 +17,21 @@ const LangSelector = () => {
 
   return (
     <>
-      <div className='bg-yellow text-primary'>
-        <div className='max-w-screen-lg px-6 mx-auto text-right'>
-          <div className='relative inline-block'>
-            <select
-              value={locale}
-              className='relative z-10 px-4 py-0 text-xs font-bold bg-transparent appearance-none focus:outline-none'
-              onChange={handleLocaleChange}>
-              {locales.map((item) => (
-                <option value={item} key={item}>
-                  {languageNames[item]}
-                </option>
-              ))}
-            </select>
+      <div className='relative inline-block ml-0 md:ml-6'>
+        <select
+          value={locale}
+          className='relative z-10 px-4 py-0 text-xs font-bold bg-transparent appearance-none focus:outline-none'
+          onChange={handleLocaleChange}>
+          {locales.map((item) => (
+            <option value={item} key={item} className='hover:color-primary color-primary'>
+              {languageNames[item]}
+            </option>
+          ))}
+        </select>
 
-            <svg className='absolute z-20 w-3 h-3 fill-current Arrow'>
-              <use href='/img/icons.svg#expand-more' />
-            </svg>
-          </div>
-        </div>
+        <svg className='absolute z-20 w-3 h-3 fill-current Arrow'>
+          <use href='/img/icons.svg#expand-more' />
+        </svg>
       </div>
 
       <style jsx>

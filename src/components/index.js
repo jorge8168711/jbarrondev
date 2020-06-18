@@ -3,6 +3,6 @@ import Layout from './Layout';
 import Footer from './Footer';
 import Socials from './Socials';
 import Profile from './Profile';
-import AboutMe from './AboutMe';
+import Interests from './Interests';
 
-export { Navigation, Layout, Footer, Socials, AboutMe, Profile };
+export { Navigation, Layout, Footer, Socials, Profile, Interests };

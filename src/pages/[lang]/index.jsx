@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { withLocale } from '../../hocs';
-import { AboutMe } from '../../components';
+import { Profile } from '../../components';
 
 const IndexPage = () => {
   return (
     <Layout contentKey='about'>
-      <AboutMe />
+      <Profile />
     </Layout>
   );
 };

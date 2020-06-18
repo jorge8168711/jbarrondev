@@ -6,16 +6,16 @@ const strings = {
     metaDescription:
       'Front-end developer, padre de familia y amante de la ilustraciónn y los videojuegos.',
     about: {
-      title: 'Acerca de mi',
+      title: 'Inicio',
       metatitle: 'Jorge Barrón | Front-end developer',
       content: (
         <>
           <p className='mb-4'>
-            Hola mi nombre es Jorge y soy desarrollador Front-end. Trabajo como desarrollador de
-            manera profesional en el desarrollo de aplicaciones y sitios Web desde hace más de 4
-            años. Comencé mi carrera solamente como un hobby, debido a que siempre me intereso la
-            programación y la tecnología en general, por lo que en cuanto tuve la oportunidad me
-            enfoque en aprender todo lo que pude acerca del tema.
+            Hola mi nombre es Jorge y soy desarrollador Front-end. Trabajo de manera profesional en
+            el desarrollo de aplicaciones y sitios Web desde hace más de 4 años. Comencé mi carrera
+            solamente como un hobby, debido a que siempre me intereso la programación y la
+            tecnología en general, por lo que en cuanto tuve la oportunidad me enfoque en aprender
+            todo lo que pude acerca del tema.
           </p>
           <p className='mb-4'>
             Afortunadamente con el tiempo se me dio la oportunidad de trabajar como desarrollador

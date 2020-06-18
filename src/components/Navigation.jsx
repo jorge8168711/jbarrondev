@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from '../hooks';
+import LangSelector from './LangSelector';
 
 const items = [
   { label: 'Acerca de mi', name: '', langKey: 'about' },
-  { label: 'Proyectos', name: '/projects', langKey: 'projects' },
-  { label: 'Contacto', name: '/contact', langKey: 'contact' }
+  { label: 'Proyectos', name: '/projects', langKey: 'projects' }
 ];
 
 const Navigation = () => {
@@ -15,7 +15,7 @@ const Navigation = () => {
   const { t, locale } = useTranslation();
 
   return (
-    <header className='px-4 py-2 shadow-md md:px-6 bg-black-25'>
+    <header className='absolute top-0 left-0 z-50 w-full px-4 py-2 md:px-6'>
       <div className='flex items-center max-w-screen-lg mx-auto'>
         <Link href='/'>
           <a className='block w-20 mr-auto md:w-32'>
@@ -41,6 +41,8 @@ const Navigation = () => {
             </li>
           ))}
         </ul>
+
+        <LangSelector />
       </div>
     </header>
   );
