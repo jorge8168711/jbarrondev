@@ -1,11 +1,40 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-montserrat)', 'sans-serif'],
+        mono: ['var(--font-fira-code)', 'monospace'],
+      },
+    },
   },
-  plugins: [require("daisyui")],
+
+  // daisyUI config (optional)
+  daisyui: {
+    styled: true,
+    themes: true,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: '',
+    darkTheme: 'dark',
+    themes: [
+      {
+        dark: {
+          primary: '#FF80BF',
+          secondary: '#7970A9',
+          accent: '#FFFF80',
+          neutral: '#454158',
+          'base-100': '#22212C',
+          info: '#9580FF',
+          success: '#8AFF80',
+          warning: '#FFCA80',
+          error: '#FF9580',
+        },
+      },
+    ],
+  },
+  plugins: [require('daisyui')],
 }
