@@ -1,6 +1,3 @@
 {
-  "extends": ["airbnb", "airbnb/hooks", "plugin:prettier/recommended"],
-  "env": {
-    "browser": true
-  }
+  "extends": "next/core-web-vitals"
 }
