@@ -1,6 +1,8 @@
-import './globals.css'
+import MainHeader from '../components/MainHeader/MainHeader'
 import { Montserrat } from '@next/font/google'
 import { Fira_Code } from '@next/font/google'
+import { ThemeProvider } from '../components/ThemePicker/ThemePicker'
+import './globals.css'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -22,7 +24,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+
+      <body>
+        <ThemeProvider>
+          <MainHeader />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
