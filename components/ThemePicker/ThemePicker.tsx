@@ -1,9 +1,9 @@
 'use client'
 
 import useLocalStorageState from '../../lib/hooks/useLocalStorage'
-import { ColorSwitch } from '@carbon/icons-react'
 import { createContext, useContext } from 'react'
 import ThemePickerItem from './ThemePickerItem'
+import { SwatchIcon } from '@heroicons/react/24/solid'
 
 const AVAILABLE_THEMES = [
   { id: 'dark', name: 'Dracula' },
@@ -28,18 +28,20 @@ export default function ThemePicker() {
     <div className='dropdown dropdown-bottom dropdown-end'>
       <label
         tabIndex={0}
-        className='btn btn-square btn-ghost mb-1'>
-        <ColorSwitch size={24} />
+        className='btn btn-sm btn-ghost mb-1'>
+        <SwatchIcon width={18} />
+        <span className='normal-case ml-2'>Theme</span>
       </label>
 
       <ul
         tabIndex={0}
-        className='dropdown-content card w-64 shadow bg-base-100'>
+        className='dropdown-content card shadow bg-base-200 p-2'>
         {themes.map((t: { name: string; id: string }) => (
           <ThemePickerItem
             onClick={() => handClick(t.id)}
             selected={t.id === theme}
             key={t.id}
+            id={t.id}
             label={t.name}
           />
         ))}
