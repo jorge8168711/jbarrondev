@@ -1,17 +1,19 @@
-import styles from './page.module.css'
-import { LogoTwitter, LogoLinkedin, LogoGithub } from '@carbon/icons-react'
+import { GetStaticPropsContext } from 'next'
+import { LogoGithub, LogoLinkedin, LogoTwitter } from '@carbon/icons-react'
+import { useTranslations } from 'next-intl'
 
 export default function Home() {
-  return (
-    <main className={`${styles.main}`}>
-      <h1 className='text-5xl font-mono text-accent font-medium'>Jorge Barrón</h1>
+  const t = useTranslations('Index')
 
+  return (
+    <>
+      <h1 className='text-5xl font-mono text-accent font-medium'>Jorge Barrón</h1>
       <p className='mt-4 text-xl font-light'>
-        Hi, thanks for being here 👋. <br />
-        I&apos;m working hard on the content of my website 👨🏽‍💻, I hope to surprise you when you come back 🥹.
+        {t('description1')} <br />
+        {t('description2')}
       </p>
 
-      <div className='flex align-center pt-2 gap-2'>
+      <div className='flex items-center pt-2 gap-2'>
         <a
           className='text-primary'
           href='https://twitter.com/_JorgeBarron'
@@ -36,6 +38,16 @@ export default function Home() {
           <LogoGithub size={24} />
         </a>
       </div>
-    </main>
+    </>
   )
+}
+
+export async function getStaticProps(context: GetStaticPropsContext) {
+  return {
+    props: {
+      // You can get the messages from anywhere you like. The recommended
+      // pattern is to put them in JSON files separated by language.
+      messages: (await import(`../messages/${context.locale}.json`)).default,
+    },
+  }
 }

@@ -1,4 +1,4 @@
-import { CheckIcon } from '@heroicons/react/24/solid'
+import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import React, { useEffect, useState } from 'react'
 
 type ThemePickerItemProps = {
@@ -19,7 +19,7 @@ export default function ThemePickerItem({ label, id, selected, onClick }: ThemeP
       onClick={() => onClick(label)}
       className='cursor-pointer py-3 pr-3 bg-base-100 rounded-lg mb-2'>
       <div className='flex items-center text-base-content pl-4'>
-        <CheckIcon
+        <CheckCircleIcon
           width={16}
           className={isSelected ? 'visible opacity-100 transition-all' : 'invisible opacity-0 transition-all'}
         />

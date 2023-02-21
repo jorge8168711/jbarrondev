@@ -1,9 +1,7 @@
-'use client'
-
-import useLocalStorageState from '../../lib/hooks/useLocalStorage'
 import { createContext, useContext } from 'react'
 import ThemePickerItem from './ThemePickerItem'
-import { SwatchIcon } from '@heroicons/react/24/solid'
+import { ChevronDownIcon, SwatchIcon } from '@heroicons/react/24/solid'
+import useLocalStorageState from '../../hooks/useLocalStorage'
 
 const AVAILABLE_THEMES = [
   { id: 'dark', name: 'Dracula' },
@@ -28,9 +26,12 @@ export default function ThemePicker() {
     <div className='dropdown dropdown-bottom dropdown-end'>
       <label
         tabIndex={0}
-        className='btn btn-sm btn-ghost mb-1'>
-        <SwatchIcon width={18} />
-        <span className='normal-case ml-2'>Theme</span>
+        className='btn btn-sm btn-ghost'>
+        <SwatchIcon
+          className='mr-1'
+          width={18}
+        />
+        <ChevronDownIcon width={18} />
       </label>
 
       <ul
