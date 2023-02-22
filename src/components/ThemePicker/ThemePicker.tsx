@@ -23,12 +23,12 @@ export default function ThemePicker() {
   }
 
   return (
-    <div className='dropdown dropdown-bottom dropdown-end'>
+    <div className="dropdown dropdown-bottom dropdown-end">
       <label
         tabIndex={0}
-        className='btn btn-sm btn-ghost'>
+        className="btn btn-sm btn-ghost px-2">
         <SwatchIcon
-          className='mr-1'
+          className="mr-1"
           width={18}
         />
         <ChevronDownIcon width={18} />
@@ -36,7 +36,7 @@ export default function ThemePicker() {
 
       <ul
         tabIndex={0}
-        className='dropdown-content card shadow bg-base-200 p-2'>
+        className="dropdown-content card shadow bg-base-200 p-2">
         {themes.map((t: { name: string; id: string }) => (
           <ThemePickerItem
             onClick={() => handClick(t.id)}
