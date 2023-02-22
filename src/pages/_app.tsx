@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from '../components/ThemePicker/ThemePicker'
 import { Montserrat } from '@next/font/google'
 import { Fira_Code } from '@next/font/google'
+import { IBM_Plex_Mono } from '@next/font/google'
 
 import '@/styles/globals.css'
 
@@ -15,9 +16,10 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
-const firaCode = Fira_Code({
+const ibmPlex = IBM_Plex_Mono({
   subsets: ['latin'],
-  variable: '--font-fira-code',
+  variable: '--font-ibm-plex',
+  weight: ['200', '400', '500', '600', '700'],
 })
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -45,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <div
         id='root-theme'
-        className={`${montserrat.variable} ${firaCode.variable} font-sans`}>
+        className={`${montserrat.variable} ${ibmPlex.variable} font-sans`}>
         <NextIntlProvider messages={pageProps.messages}>
           <ThemeProvider>
             <Layout>

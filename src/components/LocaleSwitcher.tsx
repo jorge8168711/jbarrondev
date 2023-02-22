@@ -14,12 +14,12 @@ export default function LocaleSwitcher() {
   const otherLocales = (locales || []).filter((locale) => locale !== activeLocale)
 
   return (
-    <div className='dropdown dropdown-bottom dropdown-end'>
+    <div className="dropdown dropdown-bottom dropdown-end">
       <label
         tabIndex={0}
-        className='btn btn-sm btn-ghost'>
+        className="btn btn-sm btn-ghost px-2">
         <LanguageIcon
-          className='mr-1'
+          className="mr-1"
           width={18}
         />
         <ChevronDownIcon width={18} />
@@ -27,22 +27,22 @@ export default function LocaleSwitcher() {
 
       <ul
         tabIndex={0}
-        className='dropdown-content card shadow bg-base-200 rounded p-0 w-32'>
+        className="dropdown-content card shadow bg-base-200 rounded p-0 w-32">
         {otherLocales.map((locale) => {
           const { pathname, query, asPath } = router
           return (
             <li
               key={locale}
-              className='px-4 py-2 flex items-center'>
+              className="px-4 py-2 flex items-center">
               <Image
-                className='mr-4'
+                className="mr-4"
                 src={`/flags/${locale}.svg`}
                 alt={LANG_NAMES[locale as keyof typeof LANG_NAMES]}
                 width={15}
                 height={15}
               />
               <Link
-                className='btn btn-sm btn-ghost'
+                className="btn btn-sm btn-ghost"
                 href={{ pathname, query }}
                 as={asPath}
                 locale={locale}

@@ -1,13 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
         sans: ['var(--font-montserrat)', 'sans-serif'],
-        mono: ['var(--font-fira-code)', 'monospace'],
+        mono: ['var(--font-ibm-plex)', 'monospace'],
       },
     },
   },
