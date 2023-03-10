@@ -14,7 +14,7 @@ export default function MainHeaderNavLink({ path, name, showDivider }: Navigatio
 
   return (
     <>
-      <li className="text-xs lg:text-sm">
+      <li className="text-xs">
         <Link
           className={`px-2 lg:px-6 ${isActive ? 'font-bold text-primary' : 'text-base-content'}`}
           href={path}
@@ -23,7 +23,7 @@ export default function MainHeaderNavLink({ path, name, showDivider }: Navigatio
         </Link>
       </li>
 
-      {showDivider && <div className="h-10 w-[1px] bg-base-content/20" />}
+      {showDivider && <div className="h-6 w-[1px] bg-base-content/10 mx-1 sm:hidden" />}
     </>
   );
 }

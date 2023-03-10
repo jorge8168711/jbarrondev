@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dots-bg {
+  background: linear-gradient(90deg, hsla(var(--b1) / var(--tw-bg-opacity, 1)) 21px, transparent 1%)
+      center,
+    linear-gradient(hsla(var(--b1) / var(--tw-bg-opacity, 1)) 21px, transparent 1%) center,
+    hsl(var(--bc) / 0.3);
+  background-size: 22px 22px;
+}
+
+.content-box {
+  @apply container mx-auto px-6;
+}
+
+.flex-full-center {
+  @apply flex items-center justify-center;
+}
+
+.full-viewport-height {
+  min-height: calc(100vh - 68px);
+}
