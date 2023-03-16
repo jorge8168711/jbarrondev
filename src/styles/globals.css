@@ -16,7 +16,9 @@
 }
 
 .content-box {
-  @apply container mx-auto px-6;
+  @apply mx-auto px-6;
+  width: 100%;
+  max-width: 1536px;
 }
 
 .flex-full-center {

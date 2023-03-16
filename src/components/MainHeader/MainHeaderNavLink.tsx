@@ -16,14 +16,16 @@ export default function MainHeaderNavLink({ path, name, showDivider }: Navigatio
     <>
       <li className="text-xs">
         <Link
-          className={`px-2 lg:px-6 ${isActive ? 'font-bold text-primary' : 'text-base-content'}`}
+          className={`py-2 px-2 lg:px-6 ${
+            isActive ? 'font-bold text-accent' : 'text-base-content'
+          }`}
           href={path}
           locale={activeLocale}>
           {name}
         </Link>
       </li>
 
-      {showDivider && <div className="h-6 w-[1px] bg-base-content/10 mx-1 sm:hidden" />}
+      {showDivider && <div className="h-4 w-[1px] bg-base-content/10 mx-1 sm:hidden" />}
     </>
   );
 }

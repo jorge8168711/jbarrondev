@@ -9,7 +9,7 @@ export default function HomeSocialsLink({
 }) {
   return (
     <a
-      className="transition-all link text-base-content/40 hover:text-base-content my-4"
+      className="transition-all link text-base-content/40 hover:text-base-content"
       href={url}
       target="__blank"
       rel="nofollow noreferrer noopener">
