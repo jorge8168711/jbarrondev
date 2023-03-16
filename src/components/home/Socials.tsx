@@ -6,10 +6,11 @@ import HomeSocialsLink from './SocialsLink';
 
 const iconSize = { width: 15, height: 15 };
 
-export default function HomeSocials() {
+export default function HomeSocials({ isVertical }: { isVertical?: boolean }) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="bg-base-content/40 h-12 w-[1px]" />
+    <>
+      {isVertical && <div className="bg-base-content/40 h-12 w-[1px]" />}
+      {!isVertical && <div className="bg-base-content/40 w-12 h-[1px]" />}
 
       <HomeSocialsLink url={'https://twitter.com/_JorgeBarron/'}>
         <TwitterIcon {...iconSize} />
@@ -23,7 +24,12 @@ export default function HomeSocials() {
         <GithubIcon {...iconSize} />
       </HomeSocialsLink>
 
-      <div className="bg-base-content/40 h-12 w-[1px]" />
-    </div>
+      {!isVertical && <div className="bg-base-content/40 w-12 h-[1px]" />}
+      {isVertical && <div className="bg-base-content/40 h-12 w-[1px]" />}
+    </>
   );
 }
+
+HomeSocials.defaultProps = {
+  isVertical: true,
+};
