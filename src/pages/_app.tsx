@@ -39,10 +39,8 @@ export default function App({ Component, pageProps }: AppProps) {
       ">{`document.documentElement.dataset.theme = JSON.parse(window.localStorage.getItem('theme') || "")`}</Script>
 
       <Head>
-        <title>Jorge Barrón | Front-end Developer</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta name="description" content="Jorge Barrón" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/favicon.svg" />
       </Head>
 
       <div id="root-theme" className={`${montserrat.variable} ${ibmPlex.variable} font-sans`}>
