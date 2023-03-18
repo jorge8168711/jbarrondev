@@ -1,4 +1,3 @@
-import { ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
 import { Breakpoint } from 'react-socks';
@@ -17,16 +16,14 @@ export default function HomeIntro() {
 
   return (
     <>
-      <h2 className="text-sm lg:text-base font-medium text-accent font-mono mb-1">
-        {t('subtitle')}
-      </h2>
+      <p className="text-sm lg:text-base font-medium text-accent font-mono mb-1">{t('subtitle')}</p>
       <h1 className="text-4xl lg:text-8xl font-semibold mb-4">JORGE BARRÓN</h1>
 
       <div className="flex items-center">
         <div className="bg-accent blink w-2 h-6 mr-4"></div>
-        <h3 className="font-semibold text-base-content/80 font-mono text-lg lg:text-xl">
+        <h2 className="font-semibold text-base-content/80 font-mono text-lg lg:text-xl">
           Front-end developer
-        </h3>
+        </h2>
       </div>
 
       <p className="text-md leading-relaxed text-base-content/70 mt-8">{t('description')}</p>

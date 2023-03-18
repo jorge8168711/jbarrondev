@@ -12,15 +12,17 @@ export default function HomeSocials({ isVertical }: { isVertical?: boolean }) {
       {isVertical && <div className="bg-base-content/40 h-12 w-[1px]" />}
       {!isVertical && <div className="bg-base-content/40 w-12 h-[1px]" />}
 
-      <HomeSocialsLink url={'https://twitter.com/_JorgeBarron/'}>
+      <HomeSocialsLink url={'https://twitter.com/_JorgeBarron/'} label="Jorge Barrón Twitter">
         <TwitterIcon {...iconSize} />
       </HomeSocialsLink>
 
-      <HomeSocialsLink url={'https://www.linkedin.com/in/jorgebarrondev/'}>
+      <HomeSocialsLink
+        url={'https://www.linkedin.com/in/jorgebarrondev/'}
+        label="Jorge Barrón linkedin">
         <LinkedinIcon {...iconSize} />
       </HomeSocialsLink>
 
-      <HomeSocialsLink url={'https://github.com/jorge8168711'}>
+      <HomeSocialsLink url={'https://github.com/jorge8168711'} label="Jorge Barrón GitHub">
         <GithubIcon {...iconSize} />
       </HomeSocialsLink>
 
