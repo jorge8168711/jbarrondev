@@ -28,3 +28,14 @@
 .full-viewport-height {
   min-height: calc(100vh - 68px);
 }
+
+@media print {
+  body {
+    print-color-adjust: exact;
+  }
+
+  @page {
+    margin: 0;
+    size: A4;
+  }
+}

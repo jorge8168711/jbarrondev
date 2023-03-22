@@ -1,9 +1,8 @@
-import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
-import { Breakpoint } from 'react-socks';
 import HomeSocials from './Socials';
-
-const mail = 'jbarron.dev@gmail.com';
+import { useTranslations } from 'next-intl';
+import { Breakpoint } from 'react-socks';
+import { MAIN_EMAIL } from '../../lib/constants';
 
 export default function HomeIntro() {
   const t = useTranslations('home');
@@ -36,7 +35,7 @@ export default function HomeIntro() {
 
       <footer className="mt-10 md:mt-14">
         <button className="btn btn-accent lg:w-44 mr-6">{t('cv-button')}</button>
-        <a href={`mailto:${mail}?subject=${t('mail-to-subject')}`} className="btn lg:w-44">
+        <a href={`mailto:${MAIN_EMAIL}?subject=${t('mail-to-subject')}`} className="btn lg:w-44">
           {t('work-with-me')}
         </a>
       </footer>

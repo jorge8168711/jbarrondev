@@ -17,7 +17,7 @@ export default function MainHeader() {
   }, []);
 
   return (
-    <header className="py-4 shadow-sm relative">
+    <header className="py-4 shadow-sm relative print:hidden">
       <nav className="flex items-center content-box sm:flex-row flex-col">
         <div className="mr-auto flex items-center w-full sm:w-auto">
           <Link href="/" locale={activeLocale} className="mr-auto">

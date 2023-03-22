@@ -7,5 +7,11 @@
     "mail-to-subject": "I want to work with you.",
     "meta-title": "Jorge Barrón — Father, Geek and Front-end developer",
     "meta-description": "I'm Mexican a Web Developer focused on Front-end technologies with 7+ years of experience. I love Programming, Art, Music, Video Games and the combination of programming with any of these topics."
+  },
+  "resume": {
+    "mail-subject": "Hi there! 😀",
+    "email": "Email",
+    "phone": "Phone Number",
+    "location": "Location"
   }
 }

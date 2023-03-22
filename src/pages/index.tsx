@@ -1,10 +1,10 @@
-import { GetStaticPropsContext } from 'next';
 import HomeIntro from '../components/home/Introduction';
 import Image from 'next/image';
 import HomeSocials from '../components/home/Socials';
+import Head from 'next/head';
+import { GetStaticPropsContext } from 'next';
 import { Breakpoint } from 'react-socks';
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 import { useTranslations } from 'next-intl';
 
 export default function Home() {
