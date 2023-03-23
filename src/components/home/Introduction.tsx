@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import HomeSocials from './Socials';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Breakpoint } from 'react-socks';
-import { MAIN_EMAIL } from '../../lib/constants';
+import { MAIN_EMAIL, WORK_POSITION } from '../../lib/constants';
 
 export default function HomeIntro() {
   const t = useTranslations('home');
+  const locale = useLocale();
   const [ready, setReady] = useState(false);
 
   // avoid hydration errors
@@ -21,7 +22,7 @@ export default function HomeIntro() {
       <div className="flex items-center">
         <div className="bg-accent blink w-2 h-6 mr-4"></div>
         <h2 className="font-semibold text-base-content/80 font-mono text-lg lg:text-xl">
-          Front-end developer
+          {WORK_POSITION}
         </h2>
       </div>
 
@@ -34,7 +35,12 @@ export default function HomeIntro() {
       )}
 
       <footer className="mt-10 md:mt-14">
-        <button className="btn btn-accent lg:w-44 mr-6">{t('cv-button')}</button>
+        <a
+          className="btn btn-accent lg:w-44 mr-6"
+          href={`/${locale}-jorge-barron-resume.pdf`}
+          download>
+          {t('cv-button')}
+        </a>
         <a href={`mailto:${MAIN_EMAIL}?subject=${t('mail-to-subject')}`} className="btn lg:w-44">
           {t('work-with-me')}
         </a>

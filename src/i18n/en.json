@@ -12,6 +12,9 @@
     "mail-subject": "Hi there! 😀",
     "email": "Email",
     "phone": "Phone Number",
-    "location": "Location"
+    "location": "Location",
+    "introduction": "Desarrollador apasionado con más de 7 años de experiencia en el desarrollo de aplicaciones web responsive multiplataforma en diversos sectores. Excelente programador JavaScript con tecnologías back-end y front-end como React.js, Next.js y Node.js y con experiencia desarrollando aplicaciones móviles utilizando tecnologías como React Native y desarrollando PWAs. Implementé eficazmente features clave que impulsaron sustancialmente el interés de los inversores y mejoraron el engagement de los clientes.",
+    "work-experience": "Experiencia Laboral",
+    "technical-skills": "Habilidades Técnicas"
   }
 }

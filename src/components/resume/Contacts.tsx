@@ -24,7 +24,7 @@ export default function ResumeContacts() {
   const t = useTranslations('resume');
 
   return (
-    <div className="font-medium text-xs flex flex-wrap gap-6 bg-base-200 p-4">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
       <ContactItem label={t('email')} url={`mailto:${MAIN_EMAIL}?subject=${t('mail-subject')}`}>
         <EnvelopeIcon className="mr-2" width={14} /> {MAIN_EMAIL}
       </ContactItem>

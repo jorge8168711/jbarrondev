@@ -6,3 +6,4 @@ export const MAIN_EMAIL = 'jbarron.dev@gmail.com';
 export const PHONE_COUNTRY_CODE = '+52';
 export const PHONE = '3316006194';
 export const LOCATION = 'Zapopan, Jalisco, México';
+export const WORK_POSITION = 'Front-end Developer';

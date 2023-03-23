@@ -12,6 +12,9 @@
     "mail-subject": "¡Hola que tal! 😀",
     "email": "Correo Electrónico",
     "phone": "Número de Teléfono",
-    "location": "Ubicación"
+    "location": "Ubicación",
+    "introduction": "Passionate developer with 7+ years of experience developing multi-platform responsive web applications across diverse industries. Proficient JavaScript programmer with backend and Front-end technologies like React.js, Next.js and Node.js and some experience with mobile applications using technologies such as React Native and developing PWAs. Effectively implemented key features that substantially drove investor interest and enhanced client engagement.",
+    "work-experience": "Work Experience",
+    "technical-skills": "Technical Skills"
   }
 }

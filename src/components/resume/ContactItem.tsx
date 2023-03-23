@@ -9,7 +9,12 @@ export default function ContactItem({ children, url, label, showOnPrint }: Conta
   const printClass = showOnPrint ? 'hidden print:inline-flex' : 'inline-flex';
 
   if (!url) {
-    return <p className={`${printClass} items-center m-0 text-base-content`}>{children}</p>;
+    return (
+      <p
+        className={`${printClass} max-w-[250px] text-sm items-center m-0 text-base-content print:text-gray-600`}>
+        {children}
+      </p>
+    );
   }
 
   return (
@@ -18,7 +23,7 @@ export default function ContactItem({ children, url, label, showOnPrint }: Conta
       href={url}
       target="__blank"
       rel="nofollow noreferrer noopener"
-      className={`${printClass} items-center link link-hover`}>
+      className={`${printClass} max-w-[250px] text-sm items-center link link-hover print:text-gray-600`}>
       {children}
     </a>
   );

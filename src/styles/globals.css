@@ -16,7 +16,7 @@
 }
 
 .content-box {
-  @apply mx-auto px-6;
+  @apply mx-auto px-8;
   width: 100%;
   max-width: 1536px;
 }
