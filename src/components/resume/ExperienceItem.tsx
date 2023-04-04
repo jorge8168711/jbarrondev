@@ -26,42 +26,45 @@ export default function ResumeExperienceItem({ experience }: ResumeExperienceIte
   const locale = useLocale();
 
   return (
-    <div className="pt-4">
-      <a
-        className="link link-hover link-primary text-xl font-medium"
-        href={experience.url}
-        target="__blank"
-        rel="nofollow noreferrer noopener">
-        {experience.company}
-      </a>
-
+    <>
       {experience.positions.map((position) => (
-        <div key={position.id} className="prose pl-6 mb-4 max-w-none">
-          <p className="text-base-content font-semibold text-md m-0 leading-normal">
-            {position.name}
-          </p>
+        <article key={position.id} className="mb-4">
+          <header>
+            <p className="m-0 text-base-content">
+              <strong>{position.name}</strong> <span>at </span>
+              <a
+                className="link link-hover text-base-content/80"
+                href={experience.url}
+                target="__blank"
+                rel="nofollow noreferrer noopener">
+                {experience.company}
+              </a>
+            </p>
 
-          <p className="flex items-center m-0 text-sm leading-normal">
-            <span>
-              {position.start.toLocaleDateString(locale, { year: 'numeric', month: 'long' })}
-            </span>
-            &nbsp; - &nbsp;
-            <span>
-              {position.end.toLocaleDateString(locale, { year: 'numeric', month: 'long' })}
-            </span>
-            &nbsp; | &nbsp;
-            {position.duration}
-          </p>
+            <p className="m-0 text-base-content/60">
+              <span>
+                {position.start.toLocaleDateString(locale, { year: 'numeric', month: 'long' })}
+              </span>
+              &nbsp; - &nbsp;
+              <span>
+                {position.end.toLocaleDateString(locale, { year: 'numeric', month: 'long' })}
+              </span>
+              &nbsp; · &nbsp;
+              {position.duration}
+              &nbsp; · &nbsp;
+              {experience.location}
+            </p>
+          </header>
 
-          <p className="m-0 text-sm leading-normal">{experience.location}</p>
-
-          <ul className="leading-relaxed text-base-content font-light">
+          <ul className="pl-10">
             {position.achievementsTasks.map((label) => (
-              <li key={label}>{label}</li>
+              <li className="leading-normal" key={label}>
+                {label}
+              </li>
             ))}
           </ul>
-        </div>
+        </article>
       ))}
-    </div>
+    </>
   );
 }

@@ -20,6 +20,9 @@
   width: 100%;
   max-width: 1536px;
 }
+.content-box.sm {
+  max-width: 1024px
+}
 
 .flex-full-center {
   @apply flex items-center justify-center;

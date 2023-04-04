@@ -1,56 +1,47 @@
 import ContactItem from './ContactItem';
-import LinkedinIcon from '../icons/LinkedinIcon';
-import GithubIcon from '../icons/GithubIcon';
-
-import {
-  DevicePhoneMobileIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
-  MapPinIcon,
-} from '@heroicons/react/24/solid';
 import { useTranslations } from 'next-intl';
 import {
   GITHUB_URL,
   LINKEDIN_URL,
   LOCATION,
   MAIN_EMAIL,
+  MY_NAME,
   PHONE,
   PHONE_COUNTRY_CODE,
 } from '../../lib/constants';
-
-const iconSize = { width: 12, height: 12 };
 
 export default function ResumeContacts() {
   const t = useTranslations('resume');
 
   return (
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+    <section className="flex flex-wrap items-center gap-4 text-xs py-6">
       <ContactItem label={t('email')} url={`mailto:${MAIN_EMAIL}?subject=${t('mail-subject')}`}>
-        <EnvelopeIcon className="mr-2" width={14} /> {MAIN_EMAIL}
+        {MAIN_EMAIL}
       </ContactItem>
+
+      <span>●</span>
 
       <ContactItem label={t('phone')} url={`tel:${PHONE_COUNTRY_CODE}${PHONE}`}>
-        <DevicePhoneMobileIcon className="mr-2" width={14} /> {PHONE_COUNTRY_CODE} {PHONE}
+        <span className="inline-block min-w-[93px]">
+          {PHONE_COUNTRY_CODE} {PHONE}
+        </span>
       </ContactItem>
 
-      <ContactItem label={t('location')}>
-        <MapPinIcon className="mr-2" width={14} /> {LOCATION}
+      <span>●</span>
+
+      <ContactItem label={`${MY_NAME} LinkedIn`} url={LINKEDIN_URL}>
+        /in/jorgebarrondev
       </ContactItem>
 
-      <ContactItem label="Jorge Barrón LinkedIn" url={LINKEDIN_URL}>
-        <LinkedinIcon {...iconSize} />
-        <span className="ml-2">linkedin.com/in/jorgebarrondev</span>
+      <span>●</span>
+
+      <ContactItem label={`${MY_NAME} GitHub`} url={GITHUB_URL}>
+        github.com/jorge8168711
       </ContactItem>
 
-      <ContactItem label="Jorge Barrón GitHub" url={GITHUB_URL}>
-        <GithubIcon {...iconSize} />
-        <span className="ml-2">github.com/jorge8168711</span>
-      </ContactItem>
+      <span>●</span>
 
-      <ContactItem showOnPrint label="jbarron.dev" url="https://jbarron.dev">
-        <GlobeAltIcon className="mr-2" width={14} />
-        jbarron.dev
-      </ContactItem>
-    </div>
+      <ContactItem label={t('location')}>{LOCATION}</ContactItem>
+    </section>
   );
 }

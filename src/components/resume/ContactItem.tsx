@@ -10,10 +10,7 @@ export default function ContactItem({ children, url, label, showOnPrint }: Conta
 
   if (!url) {
     return (
-      <p
-        className={`${printClass} max-w-[250px] text-sm items-center m-0 text-base-content print:text-gray-600`}>
-        {children}
-      </p>
+      <p className={`${printClass} text-base-content/70 m-0 print:text-gray-600`}>{children}</p>
     );
   }
 
@@ -23,7 +20,7 @@ export default function ContactItem({ children, url, label, showOnPrint }: Conta
       href={url}
       target="__blank"
       rel="nofollow noreferrer noopener"
-      className={`${printClass} max-w-[250px] text-sm items-center link link-hover print:text-gray-600`}>
+      className={`${printClass} text-base-content/70 link link-hover print:text-gray-600`}>
       {children}
     </a>
   );

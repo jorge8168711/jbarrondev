@@ -1,20 +1,36 @@
 {
   "home": {
     "subtitle": "Hi, my name is",
-    "description": "I'm a developer focused on Front-end technologies. I love Programming, Art, Music, Video Games and the combination of programming with any of these topics.",
+    "description": "I'm Mexican 🇲🇽 Developer focused on Front-end technologies. I love Programming, Art, Music, Video Games and the combination of programming with any of these topics.",
     "cv-button": "Download CV",
     "work-with-me": "Hire Me",
     "mail-to-subject": "I want to work with you.",
-    "meta-title": "Jorge Barrón — Father, Geek and Front-end developer",
-    "meta-description": "I'm Mexican a Web Developer focused on Front-end technologies with 7+ years of experience. I love Programming, Art, Music, Video Games and the combination of programming with any of these topics."
+    "meta-title": "Jorge Barrón — Father, Front-end Engineer, and Tech Enthusiast.",
+    "meta-description": "I'm Mexican Developer focused on Front-end technologies with 7+ years of experience. I love Programming, Art, Music, Video Games and the combination of programming with any of these topics."
   },
   "resume": {
+    "meta-title": "Jorge Barrón — Resume",
+    "meta-description": "Passionate developer with 7+ years of experience developing multi-platform responsive web applications across diverse industries.",
     "mail-subject": "Hi there! 😀",
     "email": "Email",
     "phone": "Phone Number",
     "location": "Location",
-    "introduction": "Desarrollador apasionado con más de 7 años de experiencia en el desarrollo de aplicaciones web responsive multiplataforma en diversos sectores. Excelente programador JavaScript con tecnologías back-end y front-end como React.js, Next.js y Node.js y con experiencia desarrollando aplicaciones móviles utilizando tecnologías como React Native y desarrollando PWAs. Implementé eficazmente features clave que impulsaron sustancialmente el interés de los inversores y mejoraron el engagement de los clientes.",
-    "work-experience": "Experiencia Laboral",
-    "technical-skills": "Habilidades Técnicas"
+    "introduction": "Passionate developer with 7+ years of experience developing multi-platform responsive web applications across diverse industries. Proficient JavaScript programmer with backend and Front-end technologies like React.js, Next.js and Node.js and some experience with mobile applications using technologies such as React Native and developing PWAs. Proven track record of implementing key features that drive investor interest and enhance client engagement.",
+    "work-experience": "Most Recent Work Experience",
+    "technical-skills": "Technical Skills",
+    "cv-button": "Download CV",
+    "condense-button": "Condense content",
+    "programming-tech": "Programming Languages & Technologies",
+    "web-development": "Web Development",
+    "css-libs": "CSS Libraries/Frameworks",
+    "js-libs": "JavaScript Libraries/Frameworks",
+    "component-libs": "Component Libraries",
+    "soft-skills": "Soft Skills",
+    "soft-skills-list": "Adaptability, Communication, Problem-Solving, Self-learning, Teamwork",
+    "languages": "Languages",
+    "languages-english": "English",
+    "languages-english-desc": "Professional Working Proficiency.",
+    "languages-spanish": "Spanish",
+    "languages-spanish-desc": "Native or Bilingual Proficiency."
   }
 }

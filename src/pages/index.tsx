@@ -5,10 +5,12 @@ import Head from 'next/head';
 import { GetStaticPropsContext } from 'next';
 import { Breakpoint } from 'react-socks';
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { MY_NAME } from '../lib/constants';
 
 export default function Home() {
   const t = useTranslations('home');
+  const locale = useLocale();
   const [ready, setReady] = useState(false);
 
   // avoid hydration errors
@@ -24,16 +26,16 @@ export default function Home() {
         <meta name="description" content={t('meta-description')} />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://jbarron.dev/" />
+        <meta property="og:url" content={`https://jbarron.dev/${locale}`} />
         <meta property="og:title" content={t('meta-title')} />
         <meta property="og:description" content={t('meta-description')} />
-        <meta property="og:image" content="/img/web-prev.png" />
+        <meta property="og:image" content="/img/home-preview.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://jbarron.dev/" />
+        <meta property="twitter:url" content={`https://jbarron.dev/${locale}`} />
         <meta property="twitter:title" content={t('meta-title')} />
         <meta property="twitter:description" content={t('meta-description')} />
-        <meta property="twitter:image" content="/img/web-prev.png" />
+        <meta property="twitter:image" content="/img/home-preview.png" />
       </Head>
 
       <section className="py-8 dots-bg full-viewport-height flex-full-center">
@@ -53,7 +55,7 @@ export default function Home() {
               priority
               className="rounded-full w-full max-w-[300px] lg:max-w-[500px]"
               src={`/img/thumb-lg.jpg`}
-              alt="Jorge Barrón"
+              alt={MY_NAME}
               width="400"
               height="400"
             />
