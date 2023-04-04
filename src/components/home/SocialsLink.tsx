@@ -12,7 +12,7 @@ export default function HomeSocialsLink({
   return (
     <a
       aria-label={label}
-      className="transition-all link text-base-content/40 hover:text-base-content"
+      className="transition-all link text-base-content/40 hover:text-accent"
       href={url}
       target="__blank"
       rel="nofollow noreferrer noopener">

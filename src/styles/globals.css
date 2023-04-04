@@ -16,9 +16,12 @@
 }
 
 .content-box {
-  @apply mx-auto px-6;
+  @apply mx-auto px-8;
   width: 100%;
   max-width: 1536px;
+}
+.content-box.sm {
+  max-width: 1024px
 }
 
 .flex-full-center {
@@ -27,4 +30,15 @@
 
 .full-viewport-height {
   min-height: calc(100vh - 68px);
+}
+
+@media print {
+  body {
+    print-color-adjust: exact;
+  }
+
+  @page {
+    margin: 0;
+    size: A4;
+  }
 }
