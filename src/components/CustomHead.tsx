@@ -20,7 +20,8 @@ export default function CustomHead({
 }: CustomHeadProps) {
   const getPageUrl = (lang: string) => {
     const localeUrl = lang === defaultLocale ? '' : `/${lang}`;
-    return `${process.env.NEXT_PUBLIC_VERCEL_URL}${localeUrl}${pathname}`;
+    const protocol = process.env.NODE_ENV === 'production' ? 'https://' : 'http://';
+    return `${protocol}${process.env.NEXT_PUBLIC_VERCEL_URL}${localeUrl}${pathname}`;
   };
 
   return (
