@@ -9,3 +9,6 @@ export const PHONE_COUNTRY_CODE = '+52';
 export const PHONE = '3316006194';
 export const LOCATION = 'Zapopan, Jalisco, México';
 export const WORK_POSITION = 'Front-end Engineer';
+
+export const ES = 'es';
+export const EN = 'en';

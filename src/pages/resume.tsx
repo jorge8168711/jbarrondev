@@ -6,38 +6,31 @@ import SizeControl from '../components/resume/SizeControl';
 import TechnicalSkills from '../components/resume/TechnicalSkills';
 import SoftSkills from '../components/resume/SoftSkills';
 import Languages from '../components/resume/Languages';
-import Head from 'next/head';
+import CustomHead from '../components/CustomHead';
 
 import { GetStaticPropsContext } from 'next';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid';
+import { useRouter } from 'next/router';
 
 export default function Resume() {
   const t = useTranslations('resume');
   const locale = useLocale();
+  const { pathname, defaultLocale } = useRouter();
 
   const [proseClass, setProseClass] = useState('prose-sm');
   const containerMaxWidth = proseClass ? 'sm' : '';
 
   return (
     <>
-      <Head>
-        <title>{t('meta-title')}</title>
-        <meta name="title" content={t('meta-title')} />
-        <meta name="description" content={t('meta-description')} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://jbarron.dev/resume/${locale}`} />
-        <meta property="og:title" content={t('meta-title')} />
-        <meta property="og:description" content={t('meta-description')} />
-        <meta property="og:image" content="/img/resume-preview.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://jbarron.dev/resume/${locale}`} />
-        <meta property="twitter:title" content={t('meta-title')} />
-        <meta property="twitter:description" content={t('meta-description')} />
-        <meta property="twitter:image" content="/img/resume-preview.png" />
-      </Head>
+      <CustomHead
+        locale={locale}
+        metaTitle={t('meta-title')}
+        metaDescription={t('meta-description')}
+        previewImgUrl="/img/home-preview.png"
+        pathname={pathname}
+        defaultLocale={defaultLocale}
+      />
 
       <hr className="border-base-content/30 my-2" />
 

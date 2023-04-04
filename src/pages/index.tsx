@@ -1,17 +1,20 @@
 import HomeIntro from '../components/home/Introduction';
 import Image from 'next/image';
 import HomeSocials from '../components/home/Socials';
-import Head from 'next/head';
+import CustomHead from '../components/CustomHead';
+
 import { GetStaticPropsContext } from 'next';
 import { Breakpoint } from 'react-socks';
 import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { MY_NAME } from '../lib/constants';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const t = useTranslations('home');
-  const locale = useLocale();
   const [ready, setReady] = useState(false);
+  const locale = useLocale();
+  const { pathname, defaultLocale } = useRouter();
 
   // avoid hydration errors
   useEffect(() => {
@@ -20,23 +23,14 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>{t('meta-title')}</title>
-        <meta name="title" content={t('meta-title')} />
-        <meta name="description" content={t('meta-description')} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://jbarron.dev/${locale}`} />
-        <meta property="og:title" content={t('meta-title')} />
-        <meta property="og:description" content={t('meta-description')} />
-        <meta property="og:image" content="/img/home-preview.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://jbarron.dev/${locale}`} />
-        <meta property="twitter:title" content={t('meta-title')} />
-        <meta property="twitter:description" content={t('meta-description')} />
-        <meta property="twitter:image" content="/img/home-preview.png" />
-      </Head>
+      <CustomHead
+        locale={locale}
+        metaTitle={t('meta-title')}
+        metaDescription={t('meta-description')}
+        previewImgUrl="/img/home-preview.png"
+        pathname={pathname}
+        defaultLocale={defaultLocale}
+      />
 
       <section className="py-8 dots-bg full-viewport-height flex-full-center">
         <div className="flex-full-center content-box flex-col-reverse md:flex-row">
