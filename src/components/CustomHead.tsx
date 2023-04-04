@@ -20,7 +20,7 @@ export default function CustomHead({
 }: CustomHeadProps) {
   const getPageUrl = (lang: string) => {
     const localeUrl = lang === defaultLocale ? '' : `/${lang}`;
-    return `${process.env.NEXT_PUBLIC_URL}${localeUrl}${pathname}`;
+    return `${process.env.NEXT_PUBLIC_VERCEL_URL}${localeUrl}${pathname}`;
   };
 
   return (
