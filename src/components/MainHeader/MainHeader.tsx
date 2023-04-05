@@ -6,8 +6,10 @@ import ThemePicker from '../ThemePicker/ThemePicker';
 import MainHeaderNavLink from './MainHeaderNavLink';
 import { useRouter } from 'next/router';
 import { Breakpoint } from 'react-socks';
+import { useTranslations } from 'next-intl';
 
 export default function MainHeader() {
+  const t = useTranslations('layout');
   const { locale: activeLocale } = useRouter();
   const [ready, setReady] = useState(false);
 
@@ -32,17 +34,17 @@ export default function MainHeader() {
           )}
         </div>
 
-        <div className="h-[1px] bg-base-content/10 w-full mt-4 mb-3 sm:hidden" />
+        <div className="h-[1px] bg-base-content/30 w-full mt-4 mb-3 sm:hidden" />
 
         <div className="flex items-center w-full sm:w-auto sm:pt-0">
           <ul className="flex items-center flex-1 sm:mx-auto sm:justify-end">
-            <MainHeaderNavLink name="_about" path="/" showDivider />
-            <MainHeaderNavLink name="_resume" path="/resume" />
+            <MainHeaderNavLink name={t('home')} path="/" showDivider />
+            <MainHeaderNavLink name={t('resume')} path="/resume" />
           </ul>
 
           {ready && (
             <Breakpoint sm up className="flex items-center">
-              <div className="bg-base-content/10 h-6 w-[1px] ml-1 mr-2 sm:mr-6"></div>
+              <div className="bg-base-content/30 h-6 w-[1px] ml-1 mr-2 sm:mr-6"></div>
 
               <div className="ml-auto">
                 <ThemePicker />

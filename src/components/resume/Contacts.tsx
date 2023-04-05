@@ -1,4 +1,4 @@
-import ContactItem from './ContactItem';
+import ResumeContactItem from './ContactItem';
 import { useTranslations } from 'next-intl';
 import {
   GITHUB_URL,
@@ -15,33 +15,35 @@ export default function ResumeContacts() {
 
   return (
     <section className="flex flex-wrap items-center gap-4 text-xs py-6">
-      <ContactItem label={t('email')} url={`mailto:${MAIN_EMAIL}?subject=${t('mail-subject')}`}>
+      <ResumeContactItem
+        label={t('email')}
+        url={`mailto:${MAIN_EMAIL}?subject=${t('mail-subject')}`}>
         {MAIN_EMAIL}
-      </ContactItem>
+      </ResumeContactItem>
 
       <span>●</span>
 
-      <ContactItem label={t('phone')} url={`tel:${PHONE_COUNTRY_CODE}${PHONE}`}>
+      <ResumeContactItem label={t('phone')} url={`tel:${PHONE_COUNTRY_CODE}${PHONE}`}>
         <span className="inline-block min-w-[93px]">
           {PHONE_COUNTRY_CODE} {PHONE}
         </span>
-      </ContactItem>
+      </ResumeContactItem>
 
       <span>●</span>
 
-      <ContactItem label={`${MY_NAME} LinkedIn`} url={LINKEDIN_URL}>
+      <ResumeContactItem label={`${MY_NAME} LinkedIn`} url={LINKEDIN_URL}>
         /in/jorgebarrondev
-      </ContactItem>
+      </ResumeContactItem>
 
       <span>●</span>
 
-      <ContactItem label={`${MY_NAME} GitHub`} url={GITHUB_URL}>
+      <ResumeContactItem label={`${MY_NAME} GitHub`} url={GITHUB_URL}>
         github.com/jorge8168711
-      </ContactItem>
+      </ResumeContactItem>
 
       <span>●</span>
 
-      <ContactItem label={t('location')}>{LOCATION}</ContactItem>
+      <ResumeContactItem label={t('location')}>{LOCATION}</ResumeContactItem>
     </section>
   );
 }

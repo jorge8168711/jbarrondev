@@ -3,7 +3,7 @@ import ResumeExperienceItem from './ExperienceItem';
 import ResumeHeading from './ResumeHeading';
 import { EXP } from './resume-experience';
 
-const WORK_EXPERIENCE_SKILLS_ID = 'work-experience';
+export const WORK_EXPERIENCE_SKILLS_ID = 'work-experience';
 
 export default function ResumeExperience() {
   const locale = useLocale();
