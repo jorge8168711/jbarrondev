@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-export default function SizeControl({ onChange }: { onChange: (val: string) => void }) {
+export default function ResumeSizeControl({ onChange }: { onChange: (val: string) => void }) {
   const t = useTranslations('resume');
   const [condensed, setCondensed] = useState(true);
 

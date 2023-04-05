@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import ResumeHeader from '../components/resume/Header';
 import ResumeContacts from '../components/resume/Contacts';
 import ResumeExperience from '../components/resume/Experience';
-import SizeControl from '../components/resume/SizeControl';
-import TechnicalSkills from '../components/resume/TechnicalSkills';
-import SoftSkills from '../components/resume/SoftSkills';
-import Languages from '../components/resume/Languages';
+import ResumeSizeControl from '../components/resume/SizeControl';
+import ResumeTechnicalSkills from '../components/resume/TechnicalSkills';
+import ResumeSoftSkills from '../components/resume/SoftSkills';
+import ResumeLanguages from '../components/resume/Languages';
 import CustomHead from '../components/CustomHead';
 
 import { GetStaticPropsContext } from 'next';
@@ -47,7 +47,7 @@ export default function Resume() {
 
         <div className="h-6 w-[1px] bg-base-content/30" />
 
-        <SizeControl onChange={(val) => setProseClass(val)} />
+        <ResumeSizeControl onChange={(val) => setProseClass(val)} />
       </div>
 
       <hr className="border-base-content/30 my-2" />
@@ -58,11 +58,11 @@ export default function Resume() {
         <ResumeContacts />
         <ResumeHeader />
         <ResumeExperience />
-        <TechnicalSkills />
+        <ResumeTechnicalSkills />
 
         <div className="flex flex-wrap">
-          <SoftSkills />
-          <Languages />
+          <ResumeSoftSkills />
+          <ResumeLanguages />
         </div>
       </div>
 

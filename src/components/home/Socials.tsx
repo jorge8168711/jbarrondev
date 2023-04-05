@@ -10,8 +10,8 @@ const iconSize = { width: 15, height: 15 };
 export default function HomeSocials({ isVertical }: { isVertical?: boolean }) {
   return (
     <>
-      {isVertical && <div className="bg-base-content/40 h-12 w-[1px]" />}
-      {!isVertical && <div className="bg-base-content/40 w-12 h-[1px]" />}
+      {isVertical && <div className="bg-base-content/30 h-12 w-[1px]" />}
+      {!isVertical && <div className="bg-base-content/30 w-12 h-[1px]" />}
 
       <HomeSocialsLink url={TWITTER_URL} label={`${MY_NAME} Twitter`}>
         <TwitterIcon {...iconSize} />
@@ -25,8 +25,8 @@ export default function HomeSocials({ isVertical }: { isVertical?: boolean }) {
         <GithubIcon {...iconSize} />
       </HomeSocialsLink>
 
-      {!isVertical && <div className="bg-base-content/40 w-12 h-[1px]" />}
-      {isVertical && <div className="bg-base-content/40 h-12 w-[1px]" />}
+      {!isVertical && <div className="bg-base-content/30 w-12 h-[1px]" />}
+      {isVertical && <div className="bg-base-content/30 h-12 w-[1px]" />}
     </>
   );
 }

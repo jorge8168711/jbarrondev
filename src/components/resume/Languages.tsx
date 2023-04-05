@@ -3,7 +3,7 @@ import ResumeHeading from './ResumeHeading';
 
 const LANGUAGES_ID = 'languages';
 
-export default function Languages() {
+export default function ResumeLanguages() {
   const t = useTranslations('resume');
 
   return (

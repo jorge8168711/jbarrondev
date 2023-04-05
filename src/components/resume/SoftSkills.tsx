@@ -3,7 +3,7 @@ import ResumeHeading from './ResumeHeading';
 
 const SOFT_SKILLS_ID = 'soft-skills';
 
-export default function SoftSkills() {
+export default function ResumeSoftSkills() {
   const t = useTranslations('resume');
 
   return (

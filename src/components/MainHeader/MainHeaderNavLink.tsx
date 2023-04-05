@@ -25,7 +25,7 @@ export default function MainHeaderNavLink({ path, name, showDivider }: Navigatio
         </Link>
       </li>
 
-      {showDivider && <div className="h-4 w-[1px] bg-base-content/10 mx-1 sm:hidden" />}
+      {showDivider && <div className="h-4 w-[1px] bg-base-content/30 mx-1 sm:hidden" />}
     </>
   );
 }

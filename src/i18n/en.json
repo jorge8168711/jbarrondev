@@ -1,11 +1,20 @@
 {
+  "layout": {
+    "home": "_home",
+    "resume": "_resume",
+    "other": "_other",
+    "footer-caption": "Designed and developed on México 🇲🇽 with lots of ❤️ and ☕️ by",
+    "relevant-experience": "Relevant Experience",
+    "skills": "Skills",
+    "source-code": "Source Code"
+  },
   "home": {
     "subtitle": "Hi, my name is",
     "description": "I'm Mexican 🇲🇽 Developer focused on Front-end technologies. I love Programming, Art, Music, Video Games and the combination of programming with any of these topics.",
     "cv-button": "Download CV",
     "work-with-me": "Hire Me",
     "mail-to-subject": "I want to work with you.",
-    "meta-title": "Jorge Barrón — Father, Front-end Engineer, and Tech Enthusiast.",
+    "meta-title": "Jorge Barrón — Father, Front-end Developer, and Tech Enthusiast.",
     "meta-description": "I'm Mexican Developer focused on Front-end technologies with 7+ years of experience. I love Programming, Art, Music, Video Games and the combination of programming with any of these topics."
   },
   "resume": {
@@ -16,7 +25,7 @@
     "phone": "Phone Number",
     "location": "Location",
     "introduction": "Passionate developer with 7+ years of experience developing multi-platform responsive web applications across diverse industries. Proficient JavaScript programmer with backend and Front-end technologies like React.js, Next.js and Node.js and some experience with mobile applications using technologies such as React Native and developing PWAs. Proven track record of implementing key features that drive investor interest and enhance client engagement.",
-    "work-experience": "Most Recent Work Experience",
+    "work-experience": "Relevant Experience",
     "technical-skills": "Technical Skills",
     "cv-button": "Download CV",
     "condense-button": "Condense content",

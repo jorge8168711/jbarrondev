@@ -1,7 +1,7 @@
 import ResumeHeading from './ResumeHeading';
 import { useTranslations } from 'next-intl';
 
-const TECHNICAL_SKILLS_ID = 'technical-skills';
+export const TECHNICAL_SKILLS_ID = 'technical-skills';
 const SKILLS = [
   {
     id: 'programming-tech',
@@ -34,7 +34,7 @@ const SKILLS = [
   },
 ];
 
-export default function TechnicalSkills() {
+export default function ResumeTechnicalSkills() {
   const t = useTranslations('resume');
 
   return (
