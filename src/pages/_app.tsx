@@ -7,7 +7,6 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from '../components/ThemePicker/ThemePicker';
 import { Montserrat } from '@next/font/google';
 import { IBM_Plex_Mono } from '@next/font/google';
-import { Analytics } from '@vercel/analytics/react';
 import '@/styles/globals.css';
 import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks';
 
@@ -54,8 +53,6 @@ export default function App({ Component, pageProps }: AppProps) {
           </BreakpointProvider>
         </NextIntlProvider>
       </div>
-
-      <Analytics />
     </>
   );
 }
