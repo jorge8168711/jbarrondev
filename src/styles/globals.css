@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dots-bg {
+  --foreground: hsla(var(--b1) / var(--tw-bg-opacity, 1));
+  --bg: hsl(var(--bc) / 0.2);
+
+  opacity: 1;
+  background-color: var(--foreground);
+  background-image: radial-gradient(
+    var(--bg) 0.8500000000000001px,
+    var(--foreground) 0.8500000000000001px
+  );
+  background-size: 17px 17px;
+}
+
+.content-box {
+  @apply mx-auto px-8;
+  width: 100%;
+  max-width: 1536px;
+}
+.content-box.sm {
+  max-width: 1024px
+}
+
+.flex-full-center {
+  @apply flex items-center justify-center;
+}
+
+.full-viewport-height {
+  min-height: calc(100vh - 68px);
+}
+
+@media print {
+  body {
+    print-color-adjust: exact;
+  }
+
+  @page {
+    margin: 0;
+    size: A4;
+  }
+}

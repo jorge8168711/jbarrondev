@@ -1,26 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
         sans: ['var(--font-montserrat)', 'sans-serif'],
-        mono: ['var(--font-fira-code)', 'monospace'],
+        mono: ['var(--font-ibm-plex)', 'monospace'],
       },
     },
   },
 
   // daisyUI config (optional)
   daisyui: {
-    styled: true,
-    themes: true,
-    base: true,
-    utils: true,
-    logs: true,
-    rtl: false,
-    prefix: '',
-    darkTheme: 'dark',
     themes: [
+      'emerald',
       {
         dark: {
           primary: '#FF80BF',
@@ -36,5 +29,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require('daisyui')],
-}
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+};

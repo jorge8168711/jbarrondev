@@ -1,0 +1,45 @@
+{
+  "layout": {
+    "home": "_inicio",
+    "resume": "_currículum",
+    "other": "_otros",
+    "footer-caption": "Diseñado y desarrollado en México 🇲🇽 con muchísimo ❤️ y ☕️ por",
+    "relevant-experience": "Experiencia profesional",
+    "skills": "Habilidades",
+    "source-code": "Código fuente"
+  },
+  "home": {
+    "subtitle": "Hola, me llamo",
+    "description": "Soy un Desarrollador Mexicano 🇲🇽 enfocado en tecnologías Front-end. Me encanta la Programación, el Arte, la Música, los Videojuegos y la combinación de la programación con cualquiera de estos temas.",
+    "cv-button": "Descargar CV",
+    "work-with-me": "Contrátame",
+    "mail-to-subject": "Me gustaría trabajar contigo.",
+    "meta-title": "Jorge Barrón — Papá, Front-end Developer y Entusiasta de la tecnología.",
+    "meta-description": "Soy un Desarrollador Mexicano enfocado en tecnologías Front-end con más de 7 años de experiencia. Me encanta la Programación, el Arte, la Música, los Videojuegos y la combinación de la programación con cualquiera de estos temas."
+  },
+  "resume": {
+    "meta-title": "Jorge Barrón — Curriculum vitae",
+    "meta-description": "Apasionado desarrollador con más de 7 años de experiencia en el desarrollo de aplicaciones web responsivas multiplataforma para diversos sectores.",
+    "mail-subject": "¡Hola que tal! 😀",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "location": "Ubicación",
+    "introduction": "Apasionado desarrollador con más de 7 años de experiencia en el desarrollo de aplicaciones web responsivas multiplataforma para diversos sectores. Excelente programador JavaScript con tecnologías backend y front-end como React.js, Next.js y Node.js y algo de experiencia con aplicaciones móviles utilizando tecnologías como React Native y desarrollando PWAs. Experiencia demostrable en la implementación de features clave que incrementaron el interés de los inversionistas y mejoraron el engagement de los clientes.",
+    "work-experience": "Experiencia relevante",
+    "technical-skills": "Habilidades técnicas",
+    "cv-button": "Descargar CV",
+    "condense-button": "Condensar Contenido",
+    "programming-tech": "Lenguajes de programación y tecnologías",
+    "web-development": "Desarrollo Web",
+    "css-libs": "Librerías CSS/Frameworks",
+    "js-libs": "Librerías JavaScript/Frameworks",
+    "component-libs": "Librerías de Componentes",
+    "soft-skills": "Habilidades Blandas",
+    "languages": "Idiomas",
+    "soft-skills-list": "Adaptabilidad, Comunicación, Resolución de problemas, Autoaprendizaje, Trabajo en equipo",
+    "languages-english": "Inglés",
+    "languages-english-desc": "Dominio laboral profesional.",
+    "languages-spanish": "Español",
+    "languages-spanish-desc": "Dominio nativo o bilingüe."
+  }
+}
