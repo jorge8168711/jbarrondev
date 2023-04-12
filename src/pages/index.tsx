@@ -27,7 +27,7 @@ export default function Home() {
         locale={locale}
         metaTitle={t('meta-title')}
         metaDescription={t('meta-description')}
-        previewImgUrl="/img/home-preview.png"
+        previewImgUrl={`/img/${locale}-home-preview.png`}
         pathname={pathname}
         defaultLocale={defaultLocale}
       />
