@@ -27,7 +27,7 @@ export default function Resume() {
         locale={locale}
         metaTitle={t('meta-title')}
         metaDescription={t('meta-description')}
-        previewImgUrl="/img/home-preview.png"
+        previewImgUrl={`/img/${locale}-resume-preview.png`}
         pathname={pathname}
         defaultLocale={defaultLocale}
       />

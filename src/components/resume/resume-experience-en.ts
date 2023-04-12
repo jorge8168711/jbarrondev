@@ -6,27 +6,16 @@ const EN_EXPERIENCE = [
     duration: '1 year 8 months',
     positions: [
       {
-        id: 'pronto_lead_javaScript_engineer',
-        name: 'Lead JavaScript Engineer',
-        start: new Date(2022, 3),
-        end: new Date(2023, 1),
-        duration: '11 months',
-        achievementsTasks: [
-          'Developed core features that attracted investors and increased customer acquisition for the company, resulting in significant revenue growth.',
-          'Efficiently managed a team of front-end developers responsible for maintaining and implementing new features, resulting in improved collaboration and productivity.',
-          'Redesigned critical modules to optimize performance and usability, resulting in faster software and a better user experience.',
-          'Resolved simple and complex technical issues to achieve a high satisfaction rate, demonstrating excellent problem-solving skills and technical knowledge.',
-        ],
-      },
-
-      {
-        id: 'pronto_javaScript_engineer',
-        name: 'JavaScript Engineer',
+        id: 'senior_javaScript_engineer',
+        name: 'Senior JavaScript Engineer',
         start: new Date(2021, 6),
-        end: new Date(2022, 2),
-        duration: '9 months',
+        end: new Date(2023, 1),
+        duration: '1 Year 8 Months',
         achievementsTasks: [
+          'Developed core features using the React library that attracted investors and increased customer acquisition for the company, resulting in significant revenue growth.',
           'Led the successful implementation of PDFTRON API to build multiple core features for the company, resulting in improved functionality and customer satisfaction.',
+          'Redesigned critical modules developed with React to optimize performance and usability, resulting in faster software and a better user experience.',
+          'Efficiently managed a team of front-end developers responsible for maintaining and implementing new features, resulting in improved collaboration and productivity.',
           'Achieved up to a 50% increase in coding efficiency for several of the company’s features, resulting in faster delivery times and increased productivity.',
           'Efficiently integrated third-party tools and components into the web application, enhancing functionality and a better user experience.',
         ],

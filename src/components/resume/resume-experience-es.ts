@@ -6,27 +6,16 @@ const ES_EXPERIENCE = [
     duration: '1 año 8 meses',
     positions: [
       {
-        id: 'pronto_lead_javaScript_engineer',
-        name: 'Lead JavaScript Engineer',
-        start: new Date(2022, 3),
-        end: new Date(2023, 1),
-        duration: '11 meses',
-        achievementsTasks: [
-          'Desarrollé core features que atrajeron inversores y aumentaron la atracción de clientes para la empresa, lo que se tradujo en un crecimiento significativo de los ingresos.',
-          'Gestionó eficazmente un equipo de desarrolladores front-end responsables del mantenimiento y la implementación de nuevas funciones, lo que mejoró la colaboración y la productividad.',
-          'Rediseño de módulos críticos para optimizar el rendimiento y la usabilidad, lo que se tradujo en un software más rápido y una mejor experiencia de usuario.',
-          'Resolví problemas técnicos simples y complejos para lograr un alto índice de satisfacción, demostrando excelentes habilidades de resolución de problemas y conocimientos técnicos.',
-        ],
-      },
-
-      {
-        id: 'pronto_javaScript_engineer',
-        name: 'JavaScript Engineer',
+        id: 'senior_javaScript_engineer',
+        name: 'Senior JavaScript Engineer',
         start: new Date(2021, 6),
-        end: new Date(2022, 2),
-        duration: '9 meses',
+        end: new Date(2023, 1),
+        duration: '1 Year 8 Months',
         achievementsTasks: [
+          'Desarrollé core features utilizando la librería React que atrajeron inversores y aumentaron la atracción de clientes para la empresa, lo que se tradujo en un crecimiento significativo de los ingresos.',
           'Dirigí la implementación exitosa de la API de PDFTRON para crear varias funciones básicas para la empresa, lo que mejoró la funcionalidad y la satisfacción del cliente.',
+          'Rediseñé módulos críticos desarrollados con Rect para optimizar el rendimiento y la usabilidad, lo que se tradujo en un software más rápido y una mejor experiencia de usuario.',
+          'Gestioné eficazmente un equipo de desarrolladores front-end responsables del mantenimiento y la implementación de nuevas funciones, lo que mejoró la colaboración y la productividad.',
           'Logré un aumento de hasta el 50% en la eficiencia del código para varias de las features de la empresa, lo que se tradujo en plazos de entrega más rápidos y una mayor productividad.',
           'Integración eficaz de herramientas y componentes de terceros en la aplicación web, mejorando la funcionalidad y la experiencia del usuario.',
         ],
