@@ -9,6 +9,7 @@ import { Montserrat } from '@next/font/google';
 import { IBM_Plex_Mono } from '@next/font/google';
 import '@/styles/globals.css';
 import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks';
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -53,6 +54,8 @@ export default function App({ Component, pageProps }: AppProps) {
           </BreakpointProvider>
         </NextIntlProvider>
       </div>
+
+      <Analytics />
     </>
   );
 }
